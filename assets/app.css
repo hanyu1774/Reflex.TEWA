@@ -1,0 +1,678 @@
+/* APP.CSS
+** IN THIS FILE ARE CUSTOM CSS CONFIGURATIONS
+** FOR CERTAIN USE CASES AND PURPOSES
+*/
+
+:root {
+    --dialog-background-color: #ffffff;
+    --dialog-background-darken: #0000003f;
+    --dialog-border-color: var(--black-65);
+    --dialog-shadow-color: #0000005f;
+    --dialog-padding: 16px 24px;
+    --dialog-border-radius: 16px;
+    --black-98: #fbfbfb;
+    --black-97: #f7f7f7;
+    --black-95: #f3f3f3;
+    --black-88: #e0e0e0;
+    --black-82: #d3d1d1;
+    --black-75: #c0c0c0;
+    --black-62: #9f9b9b;
+    --black-47: #777777;
+    --black-25: #3f3f3f;
+    --dark-green-90: #d1fae1; /* Used for main background */
+    --dark-green-35: #12a149;
+    --dark-green-30: #0f8a3e;
+    --dark-green-25: #0d7334;
+    --dark-green-20: #0a5c29;
+    --light-green-90: #daf5d6;
+    --light-green-43: #3dae2b;
+    --light-green-20: #1d5214;
+    --yellow-green-90: #efffcc;
+    --yellow-green-37: #80bc00;
+    --yellow-green-20: #466600;
+    --yellow-90: #feefcd;
+    --yellow-60: #fcc136;
+    --yellow-54: #fbb61a;
+    --yellow-45: #e29f03;
+    --orange-45: #e27303;
+    --red-55: #e93c2f;
+    --red-49: #e02518;
+    --red-40: #b91e13;
+}
+
+/* Base Styles */
+html,
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.background-forestgreen {
+    background-color: #0e613a;
+}
+
+.btn.button-background-and-border-color-apricot {
+    border: 1px solid #e97d7d;
+    height: 38px;
+    background-color: #e97d7d;
+}
+
+ .btn.button-background-and-border-color-apricot:hover {
+    background-color: #DC7272;
+    border: 1px solid #DC7272;
+    height: 38px;
+}
+ .btn.button-background-and-border-color-apricot img 
+ {
+     width: 25px;
+ }
+
+.btn.for-add-row img 
+{
+    transform: translateY(-1px);
+    width:25px;
+}
+
+width-75pt {
+        width: 75pt;
+}
+
+width-110px {
+    width:110px !important;
+}
+
+.vertical-45pt {
+    height: 45pt;
+}
+
+.shift-box-with-checkboxes-up {
+    transform: translateY(-0.188rem);
+}
+
+.shift-icon-in-button-up {
+    transform: translateY(-0.13em);
+}
+
+.container-1700px {
+    max-width: 1700px;
+}
+
+.form-control-sm {
+    width: auto;
+    min-width: 100px;
+    max-width: 100%;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.padding-0_5rem {
+    padding: 0.5rem;
+}
+
+.delete-button-cell {
+    width: 125px;
+    padding-left: 0;
+    padding-right: 0.5rem;
+}
+
+.input-date {
+    width: 130px;
+}
+
+.input-time {
+    width: 100px;
+}
+
+.input-travel-reason { 
+    min-width: 155px;
+}
+
+.input-locations {
+    width: 140px;
+}
+
+.input-kilometers {
+    width: 130px;
+}
+
+.input-incidental-costs {
+    width: 120px;
+}
+
+.date-cell {
+    width: 130px;
+}
+
+.time-cell {
+    width: 110px;
+}
+
+.travel-reason-cell { 
+    min-width: 160px;
+    width: auto;
+}
+
+.location-cell { 
+    width: 140px;
+}
+
+.kilometers-cell { 
+    width: 220px;
+}
+
+.meals-cell { 
+    width: 90px; 
+}
+
+.incidental-costs-cell { 
+    width: 120px;
+}
+
+
+.meals-content {
+    border: 1px solid #dee2e6;
+    padding: 0.25rem 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--bs-border-radius);
+    /*height: 100%;*/
+}
+
+
+
+.form-check-inline {
+    align-items: center;
+}
+
+.message-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.message {
+    padding: .75rem 1rem;
+    min-width: 240px;
+    border-radius: .25rem;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fade-in .3s ease-out;
+}
+
+    .message.info {
+        background: #0d6efd;
+    }
+
+    .message.success {
+        background: #198754;
+    }
+
+    .message.warning {
+        background: #ffc107;
+        color: #000;
+    }
+
+    .message.error {
+        background: #dc3545;
+    }
+
+.close-btn {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+/* simple fade-in */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*  THIS NEEDS TO BE TESTED AND FULLY IMPLEMENTED LATER ON IF NEEDED
+**
+@media (min-width: 576px) {
+    .container-1500px {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-1500px {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+**
+*/
+
+/* IMPORT DISABLED CSS CLASSES FROM BOOTSTRAP
+** FOLLOWING IMPLEMENTES CSS CLASSES FROM THE BOOTSTRAP 5.3
+** HOWEVER, THOSE CLASSES ARE DISABLED BY DEFAULT IN THE FILE _VARIABLE.SCSS OF BOOTSTRAP
+** TO SAFE SPACE BY NOT DOWNLOADING ALL THE FILES WITH CODE, THOSE CLASSES ARE PUT HERE
+*/
+
+/* Negative margins - Scale 1 (-0.25rem) */
+.m-n1 {
+    margin: -0.25rem !important;
+}
+
+.mt-n1 {
+    margin-top: -0.25rem !important;
+}
+
+.mb-n1 {
+    margin-bottom: -0.25rem !important;
+}
+
+.ms-n1 {
+    margin-left: -0.25rem !important;
+}
+
+.me-n1 {
+    margin-right: -0.25rem !important;
+}
+
+.mx-n1 {
+    margin-left: -0.25rem !important;
+    margin-right: -0.25rem !important;
+}
+
+.my-n1 {
+    margin-top: -0.25rem !important;
+    margin-bottom: -0.25rem !important;
+}
+
+/* Negative margins - Scale 2 (-0.5rem) */
+.m-n2 {
+    margin: -0.5rem !important;
+}
+
+.mt-n2 {
+    margin-top: -0.5rem !important;
+}
+
+.mb-n2 {
+    margin-bottom: -0.5rem !important;
+}
+
+.ms-n2 {
+    margin-left: -0.5rem !important;
+}
+
+.me-n2 {
+    margin-right: -0.5rem !important;
+}
+
+.mx-n2 {
+    margin-left: -0.5rem !important;
+    margin-right: -0.5rem !important;
+}
+
+.my-n2 {
+    margin-top: -0.5rem !important;
+    margin-bottom: -0.5rem !important;
+}
+
+/* Negative margins - Scale 3 (-1rem) */
+.m-n3 {
+    margin: -1rem !important;
+}
+
+.mt-n3 {
+    margin-top: -1rem !important;
+}
+
+.mb-n3 {
+    margin-bottom: -1rem !important;
+}
+
+.ms-n3 {
+    margin-left: -1rem !important;
+}
+
+.me-n3 {
+    margin-right: -1rem !important;
+}
+
+.mx-n3 {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+}
+
+.my-n3 {
+    margin-top: -1rem !important;
+    margin-bottom: -1rem !important;
+}
+
+/* Negative margins - Scale 4 (-1.5rem) */
+.m-n4 {
+    margin: -1.5rem !important;
+}
+
+.mt-n4 {
+    margin-top: -1.5rem !important;
+}
+
+.mb-n4 {
+    margin-bottom: -1.5rem !important;
+}
+
+.ms-n4 {
+    margin-left: -1.5rem !important;
+}
+
+.me-n4 {
+    margin-right: -1.5rem !important;
+}
+
+.mx-n4 {
+    margin-left: -1.5rem !important;
+    margin-right: -1.5rem !important;
+}
+
+.my-n4 {
+    margin-top: -1.5rem !important;
+    margin-bottom: -1.5rem !important;
+}
+
+/* Negative margins - Scale 5 (-3rem) */
+.m-n5 {
+    margin: -3rem !important;
+}
+
+.mt-n5 {
+    margin-top: -3rem !important;
+}
+
+.mb-n5 {
+    margin-bottom: -3rem !important;
+}
+
+.ms-n5 {
+    margin-left: -3rem !important;
+}
+
+.me-n5 {
+    margin-right: -3rem !important;
+}
+
+.mx-n5 {
+    margin-left: -3rem !important;
+    margin-right: -3rem !important;
+}
+
+.my-n5 {
+    margin-top: -3rem !important;
+    margin-bottom: -3rem !important;
+}
+
+/* IMPORT DISABLED CSS CLASSES FROM BOOTSTRAP
+** ## END
+*/
+
+/* TODO: REPLACE THE FOLLOWING CLASSES WITH BOOTSTRAP CLASSES OR CUSTOM CLASSES
+** AND REMOVE THE USELESS CLASSES DOWN BELOW - OUT!
+** */
+
+.e-card-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.e-card-container-middle {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.e-full-height {
+    height: 100vh;
+}
+
+.e-responsive-container {
+    padding: 16px;
+}
+
+/* Header Styles */
+.e-card-header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.e-text-white {
+    color: white;
+}
+
+.e-flex {
+    display: flex;
+}
+
+.e-align-center {
+    align-items: center;
+}
+
+.e-gap-2 {
+    gap: 12px;
+}
+
+/* Footer Styles */
+.e-card-footer-container {
+    margin-top: auto;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f8f8f8;
+}
+
+.toolbar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.toolbar-items {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.toolbar-item {
+    padding: 0 10px;
+}
+
+.toolbar-item.spacer {
+    flex: 1;
+}
+
+/* Card Styles */
+.card {
+    border: 1px solid var(--black-88);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--black-88);
+    background-color: #f8f8f8;
+}
+
+.e-card-header-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/* Grid Styles */
+.grid {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.grid-row {
+    display: flex;
+    border-bottom: 1px solid var(--black-95);
+}
+
+.grid-cell {
+    padding: 8px;
+}
+
+.no-records {
+    padding: 15px;
+    color: var(--black-47);
+    text-align: left;
+}
+
+/* Form Element Styles */
+.input-container {
+    width: 100%;
+}
+
+.text-box,
+.date-picker,
+.numeric-text-box {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--black-82);
+    border-radius: 4px;
+}
+
+.e-btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    margin-left: 8px;
+}
+
+.e-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.e-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.e-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.e-btn-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Accordion Styles */
+.accordion {
+    border: 1px solid var(--black-88);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--black-88);
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    padding: 12px 16px;
+    background-color: #e9f0fd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-icon {
+    font-size: 12px;
+}
+
+.accordion-content {
+    padding: 12px 16px;
+    background-color: white;
+}
+
+.accordion-item.expanded .accordion-content {
+    display: block;
+}
+
+.accordion-item:not(.expanded) .accordion-content {
+    display: none;
+}
+
+/* Radio Button Styles */
+.radio-container {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.radio-label {
+    margin-left: 8px;
+}
+
+/* Utility Classes */
+.e-m-2 {
+    margin: 16px;
+}
+
+.e-mb-2 {
+    margin-bottom: 16px;
+}
+
+.e-mt-2 {
+    margin-top: 16px;
+}
+
+.e-float-right {
+    float: right;
+}
+
+.e-card-separator {
+    height: 1px;
+    background-color: var(--black-88);
+    margin: 16px 0;
+}

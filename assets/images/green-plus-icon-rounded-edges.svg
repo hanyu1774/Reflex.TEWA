@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   width="112.88889mm"
+   height="112.88889mm"
+   viewBox="0 0 400 400"
+   id="svg_plus_icon_rounded"
+   version="1.1">
+  
+  <!-- Hintergrundkreis -->
+  <circle
+     style="fill:#48b02c;"
+     cx="200"
+     cy="200"
+     r="200" />
+
+  <!-- Geometrisches Pluszeichen (Kreuz) mit abgerundeten Enden, zentriert -->
+  <g style="fill:#FFFFFF;">
+    <!-- Vertikaler Balken -->
+    <rect
+       x="180"         
+       y="100"         
+       width="40"      
+       height="200"    
+       rx="20"         
+       ry="20" />      
+    
+    <!-- Horizontaler Balken -->
+    <rect
+       x="100"         
+       y="180"         
+       width="200"     
+       height="40"     
+       rx="20"         
+       ry="20" />      
+  </g>
+</svg>
