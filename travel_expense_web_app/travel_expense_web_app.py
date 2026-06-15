@@ -1,27 +1,27 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 
-import reflex as rx
+import reflex  
 
 from rxconfig import config
 
 
-class State(rx.State):
+class State(reflex.State):
     """The app state."""
 
 
-def index() -> rx.Component:
+def index() -> reflex.Component:
     # Welcome Page (Index)
-    return rx.container(
-        rx.color_mode.button(position="top-right"),
-        rx.vstack(
-            rx.heading("Welcome to Reflex!", size="9"),
-            rx.text(
+    return reflex.container(
+        reflex.color_mode.button(position="top-right"),
+        reflex.vstack(
+            reflex.heading("Welcome to Reflex!", size="9"),
+            reflex.text(
                 "Get started by editing ",
-                rx.code(f"{config.app_name}/{config.app_name}.py"),
+                reflex.code(f"{config.app_name}/{config.app_name}.py"),
                 size="5",
             ),
-            rx.link(
-                rx.button("Check out our docs!"),
+            reflex.link(
+                reflex.button("Check out our docs!"),
                 href="https://reflex.dev/docs/getting-started/introduction/",
                 is_external=True,
             ),
@@ -32,5 +32,5 @@ def index() -> rx.Component:
     )
 
 
-app = rx.App()
+app = reflex.App()
 app.add_page(index)

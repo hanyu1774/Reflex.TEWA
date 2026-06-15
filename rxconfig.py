@@ -1,9 +1,9 @@
-import reflex as rx
+import reflex  
 
-config = rx.Config(
+config = reflex.Config(
     app_name="travel_expense_web_app",
     plugins=[
-        rx.plugins.SitemapPlugin(),
-        rx.plugins.TailwindV4Plugin(),
+        reflex.plugins.SitemapPlugin(),
+        reflex.plugins.TailwindV4Plugin(),
     ]
 )
